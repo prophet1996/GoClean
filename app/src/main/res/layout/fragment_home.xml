@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.swatcchindia.goclean.Screens.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/img"
+        android:layout_gravity="center_horizontal|top" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center" />
+
+    <EditText
+        android:layout_width="229dp"
+        android:layout_marginBottom="70dp"
+
+        android:layout_height="218dp"
+        android:id="@+id/editText2"
+        android:layout_gravity="center_horizontal|bottom" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POST"
+
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal|bottom" />
+</FrameLayout>
