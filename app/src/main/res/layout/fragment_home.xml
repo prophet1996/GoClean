@@ -8,32 +8,28 @@
 
 
     <ImageView
+        android:id="@+id/img"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:id="@+id/img"
         android:layout_gravity="center_horizontal|top" />
 
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        android:layout_marginBottom="50dp"
-        android:layout_gravity="center" />
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <EditText
-        android:layout_width="229dp"
-        android:layout_marginBottom="70dp"
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-        android:layout_height="218dp"
-        android:id="@+id/editText2"
-        android:layout_gravity="center_horizontal|bottom" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="POST"
-
-        android:id="@+id/button"
-        android:layout_gravity="center_horizontal|bottom" />
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.CardView>
 </FrameLayout>

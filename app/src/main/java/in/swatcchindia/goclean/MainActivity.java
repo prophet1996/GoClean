@@ -33,6 +33,7 @@ import in.swatcchindia.goclean.Screens.PostFragment;
 
 public class MainActivity extends AppCompatActivity {
     PostFragment pf;
+   public static String current_image;
 
 
     private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         File mediaFile;
         if (type == MEDIA_TYPE_IMAGE) {
+
             mediaFile = new File(mediaStorageDir.getPath() + File.separator +
                     "IMG_" + timeStamp + ".jpg");
         } else {
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             folder.mkdir();
         }SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
         String currentDateandTime = sdf.format(new Date());
-
+        current_image="sdcard/camera_app/cam_image"+currentDateandTime+".jpg";
         File image_file = new File(folder, "cam_image"+currentDateandTime+".jpg");
         return image_file;
 
@@ -118,8 +120,8 @@ public class MainActivity extends AppCompatActivity {
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
 
-        //  Drawable draw = getResources().getDrawable(R.drawable.camera, getTheme());
-        // fab.setImageDrawable(draw);
+          Drawable draw = getResources().getDrawable(R.drawable.camera, getTheme());
+        fab.setImageDrawable(draw);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -182,14 +184,13 @@ public class MainActivity extends AppCompatActivity {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch (position) {
-                case 0:
+                case 0:HomeFragment home=new HomeFragment();
 
-                    return HomeFragment.newInstance(position + 1);
+                    return home;
 
-                case 1:
+                case 1:PostFragment post=new PostFragment();
 
-                    return PostFragment.newInstance(position + 1);
-            }
+return post;            }
 
             return null;
         }
@@ -239,10 +240,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         super.onActivityResult(requestCode, resultCode, data);
-        String path = "sdcard/camera_app/cam_image.jpg";
+        String path = current_image;
 
 
-            ImageView img = (ImageView)findViewById(R.id.img);
+            ImageView img = (ImageView)findViewById(R.id.img2);
 
 
 
