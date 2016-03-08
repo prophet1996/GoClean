@@ -1,7 +1,6 @@
 package in.swatcchindia.goclean.Screens;
 
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -22,14 +21,7 @@ public class PostFragment extends Fragment {
     public PostFragment() {
         // Required empty public constructor
     }
-    public static HomeFragment newInstance(int sectionNumber) {
 
-        HomeFragment fragment = new HomeFragment();
-        Bundle args = new Bundle();
-        args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
 
     @Override
