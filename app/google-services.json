@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1058132863145",
+    "firebase_url": "https://goclean-828c4.firebaseio.com",
+    "project_id": "goclean-828c4",
+    "storage_bucket": "goclean-828c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058132863145:android:3fe0005918dca590",
+        "android_client_info": {
+          "package_name": "in.swatcchindia.goclean"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058132863145-t55dd70epds5tj68slm5ru7kdgs9kaqe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.swatcchindia.goclean",
+            "certificate_hash": "F221CFB47D7D71A7C8BAFB35AFC35FB565FD6807"
+          }
+        },
+        {
+          "client_id": "1058132863145-go5tu0ficgiovf49ruvfr7s822am27de.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA42Dnr-jOJjKMUbmxel9oTPnsRasO4XmI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058132863145-go5tu0ficgiovf49ruvfr7s822am27de.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

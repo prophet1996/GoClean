@@ -11,6 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -25,6 +28,7 @@ import in.swatcchindia.goclean.CardAdapter;
 import in.swatcchindia.goclean.Config;
 import in.swatcchindia.goclean.GetBitmap;
 import in.swatcchindia.goclean.R;
+import in.swatcchindia.goclean.model.RespJSON;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -49,7 +53,7 @@ public class HomeFragment extends Fragment {
         View root = (View) inflater.inflate(R.layout.fragment_home, container, false);
         recyclerview = (RecyclerView) root.findViewById(R.id.recyclerView);
         recyclerview.setLayoutManager(layoutManager);
-        getData();
+       // getData();
       /*  Card card = new Card(getContext());
         CardHeader header = new CardHeader(getContext());
         card.addCardHeader(header);
@@ -149,3 +153,11 @@ public class HomeFragment extends Fragment {
     }
 
 }
+ class GSONTester{
+    RespJSON respJSON= new RespJSON("isank","88687","https","Delhi");
+     GsonBuilder gsonBuilder= new GsonBuilder();
+     Gson gson=gsonBuilder.create();
+    String  jsonString=gson.toJson(respJSON);
+
+ }
+
